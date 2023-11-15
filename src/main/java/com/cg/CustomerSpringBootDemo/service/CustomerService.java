@@ -24,17 +24,19 @@ public class CustomerService {
 
     }
 
-    public boolean saveCustomer(Customer customer){
+    public void saveCustomer(Customer customer){
         Customer savedCustomer = repo.save(customer);
-        return repo.findById(savedCustomer.getId()).isPresent();
+
     }
 
-    public boolean deleteCustomer(Integer id){
+    public void deleteCustomer(Integer id){
         repo.deleteById(id);
-        return repo.findById(id).isPresent();
 
 
 
     }
+
+
+
 
 }
